@@ -1,6 +1,5 @@
-# todo_weather_app
-
-A Flutter application built as part of a **technical test**.  
+# Todo Weather App
+ 
 It combines a **To-Do List** with a **Weather Dashboard**, following clean architecture, state management with **BLoC**, and local persistence using **Hive**.
 
 ---
@@ -16,6 +15,7 @@ It combines a **To-Do List** with a **Weather Dashboard**, following clean archi
 - Add tasks with **title + description**
 - Mark tasks as complete/incomplete
 - Persist tasks locally with **Hive**
+- Pull-to-refresh support
 - Smooth UI animations for adding/removing tasks
 
 ### 🌤 Weather Dashboard
@@ -29,24 +29,41 @@ It combines a **To-Do List** with a **Weather Dashboard**, following clean archi
 - Material 3 inspired design
 - Light & Dark mode support
 - Custom snackbar for success/error messages
+- Custom Textfield and button widgets
 
 ### 🧪 Testing
-- Added **unit tests** for To-Do repository (add/remove/update)
+- Added **unit tests** for To-Do repository (add/remove)
 - Easily extendable for widget & integration testing
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Flutter** (latest stable)
+- **Flutter**
 - **Dart**
 - **Bloc (flutter_bloc)** → State management
 - **Hive** → Local persistence
-- **Dio / http** → API integration
+- **Dio** → API integration
 - **flutter_screenutil** → Responsive UI
 - **OpenWeatherMap API** → Weather data
 - **mocktail + flutter_test** → Unit testing
+  
+---
 
+## Instructions to run the code
+
+- Install dependencies
+  ```bash
+  flutter pub get
+- Generate Hive adapters (if not already generated)
+```bash
+ flutter packages pub run build_runner build
+- Set up API key for weather
+- Create a .env file or use Flutter defines
+- Add your OpenWeatherMap API key
+```bash
+ flutter run --dart-define=OWM_API_KEY=your_api_key_here
+  
 ---
 
 ## 📂 Project Structure
