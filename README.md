@@ -50,7 +50,7 @@ It combines a **To-Do List** with a **Weather Dashboard**, following clean archi
 
 ---
 
-## 🛠️ App UI
+## App UI
 
 <p float="left">
 <img src="https://github.com/user-attachments/assets/b361c5a4-23fd-436d-9cc2-cfb9c66632aa"  width=300 height=600>&emsp;&emsp;  
