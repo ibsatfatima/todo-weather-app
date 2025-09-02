@@ -57,8 +57,14 @@ class _TodoScreenState extends State<TodoScreen> with TickerProviderStateMixin {
         ),
       ),
       body: AnimatedSwitcher(
-        duration: const Duration(milliseconds: 400),
-        switchInCurve: Curves.easeIn,
+        duration: const Duration(milliseconds: 500),
+        transitionBuilder: (child, animation) {
+          final inAnimation = Tween<Offset>(
+            begin: const Offset(1, 0),
+            end: Offset.zero,
+          ).animate(CurvedAnimation(parent: animation, curve: Curves.easeOut));
+          return SlideTransition(position: inAnimation, child: child);
+        },
         child: tabs[_currentIndex],
       ),
       bottomNavigationBar: BottomNavigationBar(
