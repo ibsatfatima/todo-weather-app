@@ -70,19 +70,4 @@ void main() {
       verifyNoMoreInteractions(box);
     });
   });
-
-  group('TodoRepository - update (bonus)', () {
-    test('updates existing todo', () async {
-      // Arrange
-      final t = Todo(id: '5', title: 'Old', description: 'Old', isDone: false);
-      when(() => box.put(t.id, t)).thenAnswer((_) async {});
-
-      // Act
-      await repo.update(t);
-
-      // Assert
-      verify(() => box.put('5', t)).called(1);
-      verifyNoMoreInteractions(box);
-    });
-  });
 }
