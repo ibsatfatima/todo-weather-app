@@ -1,6 +1,8 @@
 # Todo Weather App
  
-It combines a **To-Do List** with a **Weather Dashboard**, following clean architecture, state management with **BLoC**, and local persistence using **Hive**.
+It combines a **To-Do List** with a **Weather Dashboard**, following feature-first structure, state management with **BLoC**, and local persistence using **Hive**.
+
+I’ve organized the app using a feature-first structure. All cross-cutting concerns like themes and reusable widgets are in core/. Each major feature: Auth, To-Do, Weather has its own folder under features/, containing its Bloc, data, and UI. This keeps related code together, makes the app easier to scale, and follows clean architecture practices. Finally, main.dart is just the entry point where I wire up the app
 
 ---
 
